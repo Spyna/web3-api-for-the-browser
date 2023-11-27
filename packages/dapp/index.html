@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Counter dApp</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="src/main.ts"></script>
+  </head>
+  <body class="bg-cyan-950 text-white text-lg">
+    <main class="shadow-lg max-w-lg mx-auto my-7 p-12">
+      <header>
+        <h1 class="text-3xl my-10 text-center font-semibold">Counter dApp</h1>
+      </header>
+      <section class="flex flex-col justify-between">
+        <button
+          id="decrement"
+          class="px-10 py-4 border border-cyan-200 rounded cursor-pointer hover:bg-cyan-900 hover:text-cyan-50 shadow-lg"
+        >
+          decrement
+        </button>
+        <p class="px-10 py-4 my-4 text-center flex items-center justify-center">
+          Counter:
+          <span id="counter" class="text-3xl ml-2">0</span>
+        </p>
+        <button
+          id="increment"
+          class="px-10 py-4 border border-cyan-200 rounded cursor-pointer hover:bg-cyan-900 hover:text-cyan-50 shadow-lg"
+        >
+          increment
+        </button>
+      </section>
+    </main>
+
+    <section id="loader" class="hidden">
+      <h2>Loading</h2>
+      <div class="loader">
+        <div class="circles">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </div>
+        <div class="pacman">
+          <span class="top"></span>
+          <span class="bottom"></span>
+          <span class="left"></span>
+          <div class="eye"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
