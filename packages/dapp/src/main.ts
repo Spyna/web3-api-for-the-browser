@@ -40,10 +40,7 @@ async function decrement() {
 }
 
 async function getCounter() {
-  const provider = new ethers.BrowserProvider(
-    window.ethereum as ethers.Eip1193Provider
-  );
-  const contract = new ethers.Contract(COUNTER_CONTRACT_ADDRESS, abi, provider);
+  const contract = await getContract();
   const count: BigInt = await contract.count();
   document.getElementById("counter")!.innerHTML = count.toString();
 }
